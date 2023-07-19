@@ -1,0 +1,74 @@
+body{
+  background-color: beige;
+}
+
+.flex-container{
+  height: 600px; /*los elementos tomarán la altura del contenedor padre, a no
+  ser que en cada contenedor hijo se defina un height o line height o un flex-start en align items u otros valores en el
+  mismo*/
+
+  /* align-items: flex-start; acomoda con el tamaño adecuado y al inicio
+  align-items: flex-end;*/
+  align-items: center; /*centrado vertical*/
+  /*align-items: stretch; este es el por defecto que expande las cajas hijas al 100 de su contenedor padre*/
+
+  align-content: center; /*centra todo verticalmente*/
+  align-content: space-between; /* hace espacio ebtre los rows*/
+  align-content: space-around; /* hace espacio ebtre los rows*/
+  align-content: flex-start; /* hace espacio ebtre los rows*/
+
+  display: flex;
+  padding: 10px;
+  border: solid 2px black;
+  background-color: darkgray;
+
+  flex-direction: row;
+  /*flex-direction: column; elementos vertical
+  flex-direction: column-reverse; elementos reverse vertical
+  flex-direction: column row-reverse; elementos al reves horizontal*/
+
+  flex-wrap: wrap; /* utiliza las filas necesarias para que los subcontenedores  caigan perfectamente*/
+  /*flex-wrap: wrap-reverse;  invierte los elementos*/
+
+  /*flex-flow: row wrap;  junta direction y wrap */
+
+  justify-content: space-between;
+  /*justify-content: center;
+  justify-content: space-around;
+  justify-content: flex-end;
+  justify-content: flex-start;*/
+
+
+
+}
+
+.caja{
+  border: 1px solid rgb(70, 70, 70);
+  background-color: white;
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  width: 150px;
+  line-height: 120px;
+  text-align: center;
+  margin: 5px;
+}
+
+.caja1{
+background-color: lightblue;
+  order: 2;
+  /*flex-grow: 5;*/
+  flex-basis: 50%;
+}
+
+.caja2{
+background-color: lightcoral;
+  order: 2;
+  /*flex-grow: 3;*/
+}
+
+.caja3{
+  background-color: lightgreen;
+  order: 1;
+  /*flex-grow: 2;*/
+}
